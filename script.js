@@ -74,4 +74,37 @@ let fakeMoviesAPI = {
     "total_results": 1951
 }
 
-console.log(fakeMoviesAPI.results[0])
+console.log(fakeMoviesAPI.results[1])
+
+let firstMovie = fakeMoviesAPI.results[1]
+
+//process of adding an element to the DOM
+function generateCards(movieObject){
+    //create star
+    let star = document.createElement("span")
+    star.classList.add("star")
+    let starContent = document.createTextNode("⭐")
+    star.appendChild(starContent)
+    document.body.appendChild(star)
+
+    //create rating 
+    let rating = document.createElement("span")
+    rating.classList.add("rating")
+    let ratingContent = document.createTextNode(movieObject.vote_average)
+    rating.appendChild(ratingContent)
+    document.body.appendChild(rating)
+
+    //create average container 
+    let averageContainer = document.createElement("div")
+    averageContainer.classList.add("average")
+    averageContainer.appendChild(star)
+    averageContainer.appendChild(rating)
+    
+    document.body.appendChild(averageContainer)
+
+    let image = document.createElement("img")
+    image.setAttribute("src", "https://image.tmdb.org/t/p/w342" + movieObject.poster_path)
+    document.body.insertBefore(image, averageContainer)
+}
+
+generateCards(firstMovie);

@@ -1,12 +1,20 @@
 
 @keyframes example {
-    from { color: blue; }
-    to { color: red; }
+    from { color: rgb(15, 15, 210); }
+    to { color: rgb(17, 241, 107); }
   }
 
-body {
+
+
+body{
+    background-color: black;
+    color: white;
+}
+
+#header{
+    display: flex;
+    justify-content: center;
     animation-name: example;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
-  }
-  
+}
