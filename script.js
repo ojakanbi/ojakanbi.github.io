@@ -135,6 +135,35 @@ function generateCards(movieObject){
 
 
 //loops through the array of movies and calles the generateCards function to generate each card
-fakeMoviesAPI.results.forEach(movie => {generateCards(movie)})
+// fakeMoviesAPI.results.forEach(movie => {generateCards(movie)})
 
-fakeMoviesAPI.results.forEach(movie => {generateCards(movie)})
+// fakeMoviesAPI.results.forEach(movie => {generateCards(movie)})
+
+const apiKey = "d80e50c14ea6d4ffe19317ea6a27fdc7"
+
+const makemovie = () => {
+
+    options = {
+        method: 'GET',
+        headers: {
+          accept: 'application/json',
+          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkODBlNTBjMTRlYTZkNGZmZTE5MzE3ZWE2YTI3ZmRjNyIsInN1YiI6IjY0ODIwNjcxNjQ3NjU0MDEyNDk3MzA1YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.D2mQxUgeO-qjMIkg3qtdbjspe-CfHT987JntpEflqeE'
+        }
+      };
+      
+      fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
+        .then(response => response.json())
+        .then(data => {
+            data.results.forEach(movie => {generateCards(movie)})
+        })
+        // .then(response => console.log(response))
+        // .catch(err => console.error(err));
+
+}
+
+window.onload = makemovie()
+
+console.log(options) 
+
+
+// lead more funct

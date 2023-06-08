@@ -37,3 +37,9 @@ body{
 .average{
    padding-top: 10%;
 }
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
