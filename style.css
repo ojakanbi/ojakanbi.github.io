@@ -9,6 +9,7 @@
 body{
     background-color: black;
     color: white;
+    
 }
 
 #header{
@@ -17,4 +18,22 @@ body{
     animation-name: example;
     animation-duration: 0.5s;
     animation-iteration-count: infinite;
+    font-size: 40px;
+}
+
+#movieContainer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    flex-wrap: wrap;
+}
+
+.image:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+   
+}
+
+.average{
+   padding-top: 10%;
 }

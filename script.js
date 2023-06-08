@@ -80,19 +80,22 @@ let firstMovie = fakeMoviesAPI.results[1]
 
 //process of adding an element to the DOM
 function generateCards(movieObject){
+
+    let movieContainer = document.getElementById("movieContainer")
+    console.log(movieContainer)
     //create star
     let star = document.createElement("span")
     star.classList.add("star")
     let starContent = document.createTextNode("⭐")
     star.appendChild(starContent)
-    document.body.appendChild(star)
+    // document.body.appendChild(star)
 
     //create rating 
     let rating = document.createElement("span")
     rating.classList.add("rating")
     let ratingContent = document.createTextNode(movieObject.vote_average)
     rating.appendChild(ratingContent)
-    document.body.appendChild(rating)
+    // document.body.appendChild(rating)
 
     //create average container 
     let averageContainer = document.createElement("div")
@@ -100,11 +103,38 @@ function generateCards(movieObject){
     averageContainer.appendChild(star)
     averageContainer.appendChild(rating)
     
-    document.body.appendChild(averageContainer)
+    // document.body.appendChild(averageContainer)
 
     let image = document.createElement("img")
-    image.setAttribute("src", "https://image.tmdb.org/t/p/w342" + movieObject.poster_path)
-    document.body.insertBefore(image, averageContainer)
+    image.setAttribute("src", "https://image.tmdb.org/t/p/w300" + movieObject.poster_path)
+    // document.body.insertBefore(image, averageContainer)
+    image.classList.add("image")
+
+    let name = document.createElement("div")
+    name.classList.add("name")
+    name.innerHTML = movieObject.title
+    // document.body.insertBefore(name, averageContainer.nextSibling)
+
+    let movies = document.createElement("section")
+    movies.classList.add("movies")
+    movies.classList.add("movies")
+    movies.appendChild(image)
+    movies.appendChild(averageContainer)
+    movies.appendChild(name)
+    // document.body.appendChild(movies)
+
+    // insert the movies section into the movieContainer
+    movieContainer.appendChild(movies)
+
+  
+
+
+   
 }
 
-generateCards(firstMovie);
+
+
+//loops through the array of movies and calles the generateCards function to generate each card
+fakeMoviesAPI.results.forEach(movie => {generateCards(movie)})
+
+fakeMoviesAPI.results.forEach(movie => {generateCards(movie)})
