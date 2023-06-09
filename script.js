@@ -139,10 +139,11 @@ function generateCards(movieObject){
 
 // fakeMoviesAPI.results.forEach(movie => {generateCards(movie)})
 
-const apiKey = "d80e50c14ea6d4ffe19317ea6a27fdc7"
+// const apiKey = "d80e50c14ea6d4ffe19317ea6a27fdc7"
 
-const makemovie = () => {
+const makemovie = (page) => {
 
+    
     options = {
         method: 'GET',
         headers: {
@@ -151,7 +152,7 @@ const makemovie = () => {
         }
       };
       
-      fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
+      fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=' + page, options)
         .then(response => response.json())
         .then(data => {
             data.results.forEach(movie => {generateCards(movie)})
@@ -161,9 +162,58 @@ const makemovie = () => {
 
 }
 
-window.onload = makemovie()
-
-console.log(options) 
 
 
-// lead more funct
+const searchMovie = (movie, page) => {
+    const options = {
+        method: 'GET',
+        headers: {
+          accept: 'application/json',
+          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkODBlNTBjMTRlYTZkNGZmZTE5MzE3ZWE2YTI3ZmRjNyIsInN1YiI6IjY0ODIwNjcxNjQ3NjU0MDEyNDk3MzA1YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.D2mQxUgeO-qjMIkg3qtdbjspe-CfHT987JntpEflqeE'
+        }
+      };
+      
+      fetch('https://api.themoviedb.org/3/search/movie?query=' + movie + '&include_adult=false&language=en-US&page=' + page, options)
+        .then(response => response.json())
+        .then(response => {
+            response.results.forEach(movie => {generateCards(movie)})
+            console.log(response)
+        })
+        .catch(err => console.error(err));
+}
+
+
+let loadButton = document.getElementById("loadButton")
+let page = 1
+// lead more function
+const loadMore = () => {
+    loadButton.addEventListener("click", function(){
+        page += 1
+        makemovie(page)
+    })
+
+}
+
+
+
+
+
+let movieSearch = document.getElementById("search")
+let searchButton = document.getElementById("searchButton")
+searchButton.addEventListener("click", function(){
+    event.preventDefault()
+    movieContainer.innerHTML = ""; // Clear movieContainer
+    let searchValue = movieSearch.value
+    console.log(searchValue)
+    searchMovie(searchValue,page)
+})
+
+
+
+
+
+// searchMovie(page)
+
+window.onload =  function  () {
+    makemovie(loadMore())
+}
