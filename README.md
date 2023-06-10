@@ -50,8 +50,9 @@ Deployed Application (optional): [Flixster Deployed Site](https://ojakanbi.githu
 
 
 
+
 https://www.loom.com/share/57f38d59f47e432aa127a9215d3bfc90
-<img src='flixster.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 ### Reflection
 
