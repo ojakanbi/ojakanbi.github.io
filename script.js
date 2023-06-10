@@ -81,7 +81,7 @@
 //Process of adding an element to the DOM
 function generateCards(movieObject){
 
-    let movieContainer = document.getElementById("movieContainer")
+    let movieContainer = document.getElementById("movies-grid")
     console.log(movieContainer)
     //create star
     let star = document.createElement("span")
@@ -92,7 +92,7 @@ function generateCards(movieObject){
 
     //create rating 
     let rating = document.createElement("span")
-    rating.classList.add("rating")
+    rating.classList.add("movie-votes")
     let ratingContent = document.createTextNode(movieObject.vote_average)
     rating.appendChild(ratingContent)
     // document.body.appendChild(rating)
@@ -109,10 +109,10 @@ function generateCards(movieObject){
     image.setAttribute("alt", movieObject.title)
     image.setAttribute("src", "https://image.tmdb.org/t/p/w300" + movieObject.poster_path)
     // document.body.insertBefore(image, averageContainer)
-    image.classList.add("image")
+    image.classList.add("movie-card")
 
     let name = document.createElement("div")
-    name.classList.add("name")
+    name.classList.add("movie-title")
     name.innerHTML = movieObject.title
     // document.body.insertBefore(name, averageContainer.nextSibling)
 
@@ -193,7 +193,7 @@ const loadMore = () => {
 }
 
 
-let loadButton = document.getElementById("loadButton")
+let loadButton = document.getElementById("load-more-movies-btn")
 let page = 1
 
 
@@ -201,17 +201,29 @@ let page = 1
 
 
 
-let movieSearch = document.getElementById("search")
-let searchButton = document.getElementById("searchButton")
-searchButton.addEventListener("click", function(){
+let movieSearch = document.getElementById("search-input")
+let searchButton = document.getElementById("close-search-btn")
+let movieContainer = document.getElementById("movies-grid")
+
+
+movieSearch.addEventListener("keyup", function(){
     event.preventDefault()
-    movieContainer.innerHTML = ""; // Clear movieContainer
-    let searchValue = movieSearch.value
-    console.log(searchValue)
-    searchMovie(searchValue,page)
+    if (movieSearch.value.length < 1) {
+        movieContainer.innerHTML = ""; // Clear movieContainer
+        makemovie(page)
+    }else{
+        movieContainer.innerHTML = ""; // Clear movieContainer
+        let searchValue = movieSearch.value
+        console.log(searchValue)
+        searchMovie(searchValue,page)
+    }
+
 })
+        
+    
+ 
 
-
+ 
 
 
 
