@@ -41,12 +41,11 @@ Deployed Application (optional): [Flixster Deployed Site](https://ojakanbi.githu
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `https://www.loom.com/embed/e68107fee6a9413b9e256f348b775cc4`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
+ `https://www.loom.com/embed/e68107fee6a9413b9e256f348b775cc4`
 
 `My Flixster Project 🎬 - Watch Video
 
 `
-
 My Flixster Project 🎬 - Watch Video
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/e68107fee6a9413b9e256f348b775cc4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
