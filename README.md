@@ -11,46 +11,46 @@ Deployed Application (optional): [Flixster Deployed Site](https://ojakanbi.githu
 
 #### Core Features
 
-- [ x ] User can view a list of current movies from The Movie Database API as a grid view
+- [x] User can view a list of current movies from The Movie Database API as a grid view
   - The grid element should have an id of `movies-grid`
   - Each movie wrapper element should have a class of `movie-card`
-- [ x ] For each movie displayed, user can see the following details:
+- [x] For each movie displayed, user can see the following details:
   - Title - the element should have a class of `movie-title`
   - Image - the `img` element should have a class of `movie-poster`
   - Votes - the element should have a class of `movie-votes`
-- [ x ] User can load more current movies by clicking a button at the bottom of the list
+- [x] User can load more current movies by clicking a button at the bottom of the list
   - The button should have an id of `load-more-movies-btn`.
   - When clicked, the page should not refresh.
   - New movies should simply be added to the bottom
-- [ x ] Allow users to search for movies and display them in a grid view
+- [x] Allow users to search for movies and display them in a grid view
   - There should be a search input element with an id of `search-input`
   - Users should be able to type into the input
   - When a user hits 'Enter', it should send a search request to the movies API
   - The results from the search should be displayed on the page
   - There should be a close icon with an id of `close-search-btn` that exits the search, clears results, and shows the current movies displayed previously
-- [ x ] Website accounts for basic HTML/CSS accessibility features
-- [ x ] Website should be responsive
+- [x] Website accounts for basic HTML/CSS accessibility features
+- [x] Website should be responsive
 
 #### Stretch Features
 
-- [ x ] Deploy website using GitHub Pages.
+- [x] Deploy website using GitHub Pages.
 - [ ] Allow user to view more details about a movie within a popup.
-- [ ] Improve the user experience through CSS & animation.
+- [x] Improve the user experience through CSS & animation.
 - [ ] Allow movie video trailers to be played using [embedded YouTube](https://support.google.com/youtube/answer/171780?hl=en)
-- [ x ] Implement anything else that you can get done to improve the app functionality!
+- [x] Implement anything else that you can get done to improve the app functionality!
 
 ### Walkthrough Video
 
- `https://www.loom.com/embed/e68107fee6a9413b9e256f348b775cc4`
 
-`My Flixster Project 🎬 - Watch Video
 
-`
-My Flixster Project 🎬 - Watch Video
+<a href="https://www.loom.com/share/57f38d59f47e432aa127a9215d3bfc90">
+    <p>Flixster - 9 June 2023 - Watch Video</p>
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/57f38d59f47e432aa127a9215d3bfc90-with-play.gif">
+  </a>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/e68107fee6a9413b9e256f348b775cc4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
-![](https://www.loom.com/embed/e68107fee6a9413b9e256f348b775cc4)
+
+![reference]: https:// "title"(https://www.loom.com/embed/e68107fee6a9413b9e256f348b775cc4)
 
 
 ### Reflection
