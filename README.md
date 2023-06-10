@@ -42,7 +42,7 @@ Deployed Application (optional): [Flixster Deployed Site](https://ojakanbi.githu
 ### Walkthrough Video
 
 
-
+https://www.loom.com/share/57f38d59f47e432aa127a9215d3bfc90
 <a href="https://www.loom.com/share/57f38d59f47e432aa127a9215d3bfc90">
     <p>Flixster - 9 June 2023 - Watch Video</p>
     <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/57f38d59f47e432aa127a9215d3bfc90-with-play.gif">
